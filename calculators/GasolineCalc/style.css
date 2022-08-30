@@ -1,0 +1,9 @@
+button {
+  margin-top: 30px;
+  color: orange;
+  padding: 5px 10px 5px 10px;
+}
+
+input {
+  display: inline-block;
+}
