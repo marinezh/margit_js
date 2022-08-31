@@ -1,0 +1,24 @@
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+button {
+  margin-top: 1rem;
+  color: white;
+  background: orange;
+  border: none;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+}

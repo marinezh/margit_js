@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Insurance calculator</h1>
+    <form>
+      <h2>Tell us what is your name:</h2>
+      <input type="text" placeholder="Enter your name, please" id="name" />
+
+      <h2>Tell us what is your age:</h2>
+      <input type="text" placeholder="Enter your age, please" id="age" />
+
+      <h2>Current Health</h2>
+      <input type="checkbox" id="hypertension" value="hypertension" />
+      <label for="hypertension">Hypertension</label>
+
+      <input type="checkbox" id="blood__sugar" value="blood__sugar" />
+      <label for="blood__sugar">Blood sugar</label>
+
+      <input type="checkbox" id="overweight" value="overweight" />
+      <label for="overweight">Overweight</label>
+
+      <h2>Habits</h2>
+
+      <input type="checkbox" id="smoking" value="smoking" />
+      <label for="smoking">Smoking</label>
+
+      <input type="checkbox" id="alcohol" value="alcohol" />
+      <label for="alcohol">Alcohol</label>
+
+      <input type="checkbox" id="exercise" value="exercise" />
+      <label for="exercise">Daily exercise</label>
+
+      <input type="checkbox" id="drugs" value="drugs" />
+      <label for="drugs">Drugs</label>
+      <div>
+        <button type="submit">Calculate</button>
+      </div>
+    </form>
+    <p id="risk__score"></p>
+
+    <script src="/Insurance/script.js"></script>
+  </body>
+</html>
