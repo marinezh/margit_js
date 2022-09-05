@@ -1,7 +1,6 @@
 const form = document.querySelector("form");
 
 const customer = document.querySelector("#name");
-console.log(customer);
 
 const size = document.querySelectorAll('[name="size"]');
 
@@ -11,16 +10,14 @@ const delivery = document.querySelector("#delivery");
 
 const order = document.querySelector("#order");
 
-console.log(delivery);
-
-console.log(size);
 
 const takeOrder = (event) => {
   event.preventDefault();
 
   let customerName = customer.value;
+
   let sizeResult = "";
-  let toppingResult = [];
+  let toppingsResult = [];
   let deliveryResult = delivery.options[delivery.selectedIndex].value;
   let price = 0;
 
@@ -29,14 +26,6 @@ const takeOrder = (event) => {
       sizeResult = item.value;
     }
   });
-
-  if (toppingResult.length > 4) {
-    price += (toppingResult.length - 4) * 0.5;
-  }
-
-  if (deliveryResult == "home") {
-    price += 5;
-  }
 
   switch (sizeResult) {
     case "two":
@@ -58,18 +47,26 @@ const takeOrder = (event) => {
   }
 
   toppings.forEach((item) => {
-    toppingResult.push(item.value);
+    if (item.checked) {
+      toppingsResult.push(item.value);
+    }
   });
 
-  order.textContent = `Name: ${customerName}, Size: ${sizeResult}, Toppings: ${toppingResult.join(
-    ", "
-  )}`;
+  if (toppingsResult.length > 4) {
+    price += (toppingsResult.length - 4) * 0.5;
+  }
 
-  console.log(customerName);
-  console.log(sizeResult);
-  console.log(toppingResult);
-  console.log(deliveryResult);
-  console.log(price);
+  if (deliveryResult == "home") {
+    price += 5;
+  }
+
+  order.innerHTML = `Thank you for your order, <span>${customerName}</span>. <br>
+  You ordered pizza for <span>${sizeResult}</span>. <br>
+  Toppings which you chose : <span>${toppingsResult.join(", ")}</span>. <br>  
+  Delivery method is : <span>${deliveryResult}</span>. <br>
+  Total price is : <span>${price} euro</span>.`;
+
+  form.reset();
 };
 
 form.addEventListener("submit", takeOrder);

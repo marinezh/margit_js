@@ -12,6 +12,10 @@ html {
   font-size: 14px;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 h1 {
   margin: 0 0 1rem;
 }
@@ -24,6 +28,7 @@ h2 {
 p {
   color: grey;
   margin: 0 0 1rem;
+  font-size: smaller;
 }
 
 input,
@@ -33,14 +38,21 @@ button {
   margin: 0.5rem 0;
   font-size: 1rem;
   padding: 0.5rem;
+
 }
 
 button {
   color: white;
   background: orange;
   border: none;
-  padding: 1rem 2rem;
+  border-radius: 5px;
+  padding: 0.5rem 3.8rem;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: orangered;
+
 }
 
 .container {
@@ -49,8 +61,8 @@ button {
 
 .hero-image {
   width: 50vw;
-  background: url("https://source.unsplash.com/UxRhrU8fPHQ") no-repeat fixed
-    bottom center/cover;
+  background: no-repeat center/cover url("https://images.unsplash.com/photo-1571066811602-716837d681de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=268&q=80");
+
 }
 
 .content {
@@ -58,13 +70,6 @@ button {
   padding: 2rem;
 }
 
-#order {
-  width: 20vw;
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-}
-
-form {
+span {
+  color: orangered;
 }
