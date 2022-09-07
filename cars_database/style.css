@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    margin-left: 25px;
+}
+
+
+
+h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    margin-top: 1.5rem;
+}
+
+input {
+
+    margin-left: 5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.1rem;
+    width: 120px;
+
+}
+
+button {
+    color: white;
+    background: #075a7c;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 2.5rem;
+    cursor: pointer;
+}
+
+.box {
+    margin-top: 5px;
+    background-color: #4EA9CC;
+    height: 15px;
+}
+
+.box2 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    background-color: #4EA9CC;
+    height: 20px;
+}
+
+.box3 {
+    margin-left: 25px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    background-color: #4EA9CC;
+    height: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.container {
+    margin-left: 25px;
+    display: flex;
+    gap: 100px
+}
+
+label {
+    font-size: 12px;
+}
+
+.field {
+    clear: both;
+    text-align: right;
+    line-height: 45px;
+}
+
+label {
+    float: left;
+    padding-right: 10px;
+}
+
+table {
+    margin-top: 23px;
+}
+
+th {
+    color: white;
+    background-color: #4EA9CC;
+    padding: 5px 5px 5px 4px;
+    font-size: 11px;
+    letter-spacing: 0;
+}
