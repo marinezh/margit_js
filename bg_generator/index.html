@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <title>Gradient Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <h1>Linear gradient <br> generator</h1>
+            <h2>Colors</h2>
+            <div class="twocolors">
+                <input id="color1" type="color" class="color">
+                <input id="color2" type="color" class="color">
+            </div>
+            <h2>Direction</h2>
+            <div class="box">
+                <div class="flex1">
+                    <div>
+                        <label for="right_bottom"
+                            class="material-symbols-outlined checkmark radio_style">south_east</label>
+                        <input type="radio" id="right_bottom" value="right bottom" name="direction">
+                    </div>
+                    <div>
+                        <label for="bottom"
+                            class="material-symbols-outlined checkmark radio_style">arrow_downward</label>
+                        <input type="radio" id="bottom" value="bottom" name="direction">
+                    </div>
+                    <div>
+                        <label for="left_bottom"
+                            class="material-symbols-outlined checkmark radio_style">south_west</label>
+                        <input type="radio" id="left_bottom" value="left_bottom" name="direction">
+                    </div>
+                </div>
+                <div class="flex2">
+                    <div>
+                        <label for="right" class="material-symbols-outlined checkmark radio_style">east</label>
+                        <input type="radio" id="right" value="right" name="direction">
+                    </div>
+
+                    <div>
+                        <label for="left" class="material-symbols-outlined checkmark radio_style">west</label>
+                        <input type="radio" id="left" value="left" name="direction">
+                    </div>
+                </div>
+
+                <div class="flex3">
+                    <div>
+                        <label for="right_top"
+                            class="material-symbols-outlined checkmark radio_style">north_east</label>
+                        <input type="radio" id="right_top" value="right top" name="direction">
+                    </div>
+                    <div>
+                        <label for="top" class="material-symbols-outlined checkmark radio_style">arrow_upward</label>
+                        <input type="radio" id="top" value="top" name="direction">
+                    </div>
+                    <div>
+                        <label for="left_top" class="material-symbols-outlined checkmark radio_style">north_west</label>
+                        <input type="radio" id="left_top" value="left top" name="direction">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="background">
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
