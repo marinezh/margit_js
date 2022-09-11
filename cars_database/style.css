@@ -13,16 +13,12 @@ header {
     margin-left: 25px;
 }
 
-
-
 h3 {
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
-button {
-    margin-top: 1.5rem;
-}
+
 
 input {
 
@@ -101,4 +97,27 @@ th {
     padding: 5px 5px 5px 4px;
     font-size: 11px;
     letter-spacing: 0;
+}
+
+table {
+    border: 0.3px solid silver;
+    border-spacing: 1px
+}
+
+td {
+    text-align: left;
+    padding-left: 5px;
+    border-color: #dddd;
+
+}
+
+tr:nth-child(odd) {
+    background-color: #dddd;
+    border: none
+}
+
+#search_wrapper {
+    display: flex;
+    margin-top: 2.5rem;
+    gap: 4rem;
 }

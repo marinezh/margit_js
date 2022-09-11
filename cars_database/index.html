@@ -18,22 +18,30 @@
     <header>
         <div class="box"></div>
         <h3>Search car by license number</h3>
-        <label for="licence">Licence number</label>
-        <input type="text" id="licence">
-        <div>
-            <button>Search</button>
-        </div>
+        <form id="search_info">
+            <label for="licence">License number</label>
+            <input type="text" id="input_search">
+            <div id='search_wrapper'>
+                <div>
+                    <button id="btn_search" type="submit">Search</button>
+                </div>
+                <div>
+                    <p id="result"></p>
+                </div>
+            </div>
+        </form>
+
         <div class="box2"></div>
-        <p class="result"></p>
+
     </header>
 
     <main>
         <div class="container">
             <div class="car_data">
                 <h3>Insert car data</h3>
-                <form class="car__info">
+                <form id="car_info">
                     <div class="field">
-                        <label for="number">Licence number</label>
+                        <label for="number">License number</label>
                         <input type="text" id="number">
                     </div>
                     <div class="field">
@@ -58,23 +66,29 @@
                     </div>
 
                     <div class="buttons">
-                        <button>Add car</button>
-                        <button>Reset</button>
+                        <button type="submit">Add car</button>
+                        <button type="reset">Reset</button>
                     </div>
                 </form>
             </div>
             <div class="database">
                 <h3>Car database</h3>
                 <table>
-                    <tr>
-                        <th>LICENCE</th>
-                        <th>MAKER</th>
-                        <th>MODEL</th>
-                        <th>OWNER</th>
-                        <th>PRICE</th>
-                        <th>COLOR</th>
+                    <thead>
+                        <tr>
+                            <th>LICENCE</th>
+                            <th>MAKER</th>
+                            <th>MODEL</th>
+                            <th>OWNER</th>
+                            <th>PRICE</th>
+                            <th>COLOR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
 
-                    </tr>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 

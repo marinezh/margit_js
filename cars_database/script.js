@@ -1,55 +1,60 @@
-const form = document.querySelector("form")
+const carInfo = document.querySelector("#car_info");
+const number = document.querySelector("#number");
+const maker = document.querySelector("#maker");
+const model = document.querySelector("#model");
+const owner = document.querySelector("#owner");
+const price = document.querySelector("#price");
+const color = document.querySelector("#color");
 
-console.log(form);
+const searchInfo = document.querySelector("#search_info");
+const searchInput = document.querySelector("#input_search");
+const result = document.querySelector("#result");
 
-
+let carsDatabase = [];
 
 const databaseCreation = (e) => {
     e.preventDefault();
 
-
-    let number = document.querySelector("#number");
-    console.log(number.value);
-
-    let maker = document.querySelector("#maker");
-    console.log(maker.value);
-
-    let model = document.querySelector("#model");
-    console.log(model.value);
-
-    let owner = document.querySelector("#owner");
-    console.log(owner.value);
-
-    let price = document.querySelector("#price");
-    console.log(price.value);
-
-    let color = document.querySelector("#color");
-    console.log(color.value);
-
     let car = {
-        number: `${number.value}`,
-        maker: `${maker.value}`,
-        model: `${model.value}`,
-        owner: `${owner.value}`,
-        price: `${price.value}`,
-        color: `${color.value}`
+        number: number.value,
+        maker: maker.value,
+        model: model.value,
+        owner: owner.value,
+        price: price.value,
+        color: color.value,
     }
-    console.log(car);
 
-    let carDatabase = []
-    carDatabase.push(car)
+    carsDatabase.push(car)
 
-    carDatabase.forEach(car => {
-        carDatabase += car
-    });
-
-    console.table(carDatabase);
-
-
-
-
+    // table with cars database creation.
+    let table = document.querySelector("table")
+    let row = table.insertRow();
+    row.insertCell().textContent = car.number;
+    row.insertCell().textContent = car.maker;
+    row.insertCell().textContent = car.model;
+    row.insertCell().textContent = car.owner;
+    row.insertCell().textContent = car.price;
+    row.insertCell().textContent = car.color;
 }
 
-form.addEventListener("submit", databaseCreation)
+// listener to the form which create database
+carInfo.addEventListener("submit", databaseCreation)
+
+const carSearchingFunc = (e) => {
+    e.preventDefault();
+
+    const output = carsDatabase.find(({ number }) => number === searchInput.value);
+
+    if (output === undefined) {
+        result.textContent = `License number ${searchInput.value} not found`;
+    } else {
+        result.textContent = `Licence number ${output.number} is ${output.maker} 
+     ${output.model} and it belongs to ${output.owner}.`;
+    }
+}
+// listener to the search
+searchInfo.addEventListener("submit", carSearchingFunc)
+
+
 
 
