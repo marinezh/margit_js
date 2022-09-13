@@ -10,6 +10,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: "Open Sans", sans-serif;
   background: linear-gradient(to right bottom, #898cd8, #000000) no-repeat fixed
@@ -21,21 +22,27 @@ body {
 }
 
 .container {
-  display: flex;
-  width: 350px;
+  text-align: left;
+  width: 300px;
   text-align: center;
-
 }
+h1,
 h2 {
   margin: 2rem auto 1rem;
+  color: silver;
 }
 .menu {
 
   /* text-align: center; */
   /* align-content: center; */
   /* padding-left: 100px; */
+  width: 300px;
   padding-top: 50px;
 }
+
+/* form {
+  text-align: center;
+} */
 
 .background {
   flex: 2;
@@ -60,6 +67,7 @@ h2 {
   align-content: center;
   gap: 5px;
   margin-top: 20px;
+  margin-left: 4rem;
   width: 150px;
 }
 
