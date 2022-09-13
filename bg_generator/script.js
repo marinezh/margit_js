@@ -9,5 +9,6 @@ let text = document.querySelector("p");
 
 const setGradient = (e) => {
   e.preventDefault();
-  let;
+  let selectedValue;
+  
 };
