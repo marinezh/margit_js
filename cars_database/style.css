@@ -118,6 +118,6 @@ tr:nth-child(odd) {
 
 #search_wrapper {
     display: flex;
-    margin-top: 2.5rem;
-    gap: 4rem;
+    margin-top: 1.5rem;
+    gap: 3rem;
 }

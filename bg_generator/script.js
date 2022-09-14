@@ -14,18 +14,15 @@ const setGradient = (e) => {
   for (const sel of direction) {
     if (sel.checked) {
       selectedValue = sel.value
-    }
-  }
+    };
+  };
 
   let gradient = `Linear-gradient(to ${selectedValue}, ${color1.value}, ${color2.value})`;
 
-console.log(gradient);
+  console.log(gradient);
 
-document.body.style.background = gradient;
-text.textContent = gradient + ';';
-
+  document.body.style.background = gradient;
+  text.textContent = gradient + ';';
 };
-
-
 
 form.addEventListener('change', setGradient);
