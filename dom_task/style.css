@@ -1,0 +1,198 @@
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+header,
+section,
+footer {
+  padding: 2 rem;
+}
+
+.btn {
+  background-color: chocolate;
+  padding: 0,5 rem 1rem;
+  border :none;
+  border-radius: 5px;
+
+}
+/* HEADER */
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 1 rem; 
+}
+
+header {
+  position: sticky;
+  top: 0;
+  height: 100px;
+  display: flex;
+  justify-content:space-between;
+  background-color: grey;
+}
+
+/* SECTIONS */
+
+section {
+  min-height: 50vh;
+  scroll-margin-top: 5rem; ;
+}
+
+
+
+/* FOOTER */
+
+
+
+#back_to_top {
+  display: none;
+  position: absolute;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 20px auto 20px;
+}
+
+ul {
+  display: flex;
+  gap: 25px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 20px;
+  justify-content: center;
+}
+
+li a {
+  display: inline-block;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* li {
+    padding: 1.5rem 2rem
+  } */
+
+#first {
+  height: 500px;
+  background-color: rgb(42, 124, 218);
+  /* padding-top: 10rem; */
+}
+
+#second {
+  height: 500px;
+  background-color: rgb(188, 212, 240);
+}
+
+#third {
+  height: 500px;
+  background-color: rgb(42, 124, 218);
+}
+
+#contact {
+  height: 500px;
+  background-color: rgb(188, 212, 240);
+}
+
+li:hover {
+  background-color: rgb(29, 104, 216);
+}
+
+button {
+  margin: 1rem 1rem;
+  color: white;
+  background: orange;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+h2 {
+  padding: 1rem 1rem;
+}
+
+/* MODAL */
+
+.overlay {
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  background-color: darkgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  min-height: 50vh;
+  width: 50vh;
+  border-radius: 10px;
+  color:grey;
+  padding:3rem;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right:20px;
+}
+
+.overlay,
+.modal,
+.close {
+  display: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  nav ul {
+    display: none;
+  };
+
+  #mob_button {
+    background-color: transparent;
+    display: block;
+    
+  }
+
+
+
+
+}
+
