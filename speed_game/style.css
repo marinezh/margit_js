@@ -1,0 +1,117 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik Moonrocks", cursive;
+  background-color: #333;
+
+  /* background-image: url("https://cdn.pixabay.com/photo/2017/04/23/14/23/nebula-2253941__480.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 64px;
+}
+section {
+    text-align: center;
+}
+
+p {
+  text-align: center;
+  color: white;
+  font-size: 48px;
+}
+
+.stars {
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+  gap: 20px;
+}
+
+.star1 {
+  background-color: #fff;
+ 
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.star2 {
+  background-image: url("https://i.pinimg.com/736x/88/85/8e/88858e91498dcdc15dc1309c119c4f25--stars-tonight-shining-star.jpg");
+  
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.star3 {
+  background-color: lavenderblush;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.star4 {
+  background-color: lavenderblush;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.star5 {
+  background-color: lavenderblush;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+i {
+    color: white;
+}
+
+
+
+.fa-star {
+color: rgb(230,230,230);
+font-size: 100px;
+cursor: pointer;
+text-shadow: 0 0 15px #25CCF7;
+text-shadow: 0 0 30px #25CCF7;
+text-shadow: 0 0 45px #25CCF7;
+text-shadow: 0 0 60px #25CCF7;
+}
+
+.fa-star:hover {
+color: white;
+transform: translateY(-5px)
+}
+
+button {
+    margin-top: 100px;
+    font-size: 32px;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor:alias;
+    color: black;
+    font-family: inherit;
+    text-align: center;
+
+    background-color: rgb(230,230,230);
+
+cursor: pointer;
+text-shadow: 0 0 15px #25CCF7;
+text-shadow: 0 0 30px #25CCF7;
+text-shadow: 0 0 45px #25CCF7;
+text-shadow: 0 0 60px #25CCF7;
+  }
+  
+  
