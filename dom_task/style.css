@@ -29,6 +29,7 @@ footer {
   cursor: pointer;
   color: white;
   font-family: inherit;
+  margin-left: 1rem;
 }
 
 h2,
@@ -109,19 +110,19 @@ section:last-child {
 
 /* MODAL */
 
-.overlay {
+.overlay.visible{
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: darkgrey;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.modal {
+.modal.visible{
   position: relative;
   background: white;
   min-height: 50vh;
@@ -129,7 +130,10 @@ section:last-child {
   border-radius: 10px;
   color: grey;
   padding: 3rem;
+  margin: 15% auto;
 }
+
+
 
 .close {
   position: absolute;
@@ -137,9 +141,9 @@ section:last-child {
   right: 20px;
 }
 
-.overlay,
-.modal,
-.close {
+.overlay
+
+ {
   display: none;
 }
 
