@@ -36,7 +36,7 @@ p {
   gap: 20px;
 }
 
-.star1 {
+/* .star1 {
   background-color: #fff;
  
   height: 100px;
@@ -71,7 +71,7 @@ p {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-}
+} */
 
 i {
     color: white;
@@ -89,10 +89,10 @@ text-shadow: 0 0 45px #25CCF7;
 text-shadow: 0 0 60px #25CCF7;
 }
 
-.fa-star:hover {
+/* .fa-star:hover {
 color: white;
 transform: translateY(-5px)
-}
+} */
 
 button {
     margin-top: 100px;
@@ -114,4 +114,12 @@ text-shadow: 0 0 45px #25CCF7;
 text-shadow: 0 0 60px #25CCF7;
   }
   
-  
+/* #stop {
+    display: none;
+} */
+
+
+
+.active {
+    color: lightskyblue;
+}

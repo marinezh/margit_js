@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +27,10 @@
   <body>
     <section>
       <h1>MAKE A WISH, CATCH A STAR</h1>
-      <p>Your score is:</p>
+      <p class="text">Your score is: 
+<span id="score">0</span>
+
+      </p>
 
       <!-- <div class="stars">
         <div class="star1 active" id="star1"></div>
@@ -37,11 +40,11 @@
         <div class="star5" id="star5"><i class="fa-thin fa-star"></i></div>
       </div> -->
       <div class="stars">
-        <i class="fa-solid fa-star active"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
+        <i id="star1" class="fa-solid fa-star active"></i>
+        <i id="star2" class="fa-solid fa-star s"></i>
+        <i id="star3" class="fa-solid fa-star"></i>
+        <i id="star4" class="fa-solid fa-star"></i>
+        <i id="star5" class="fa-solid fa-star"></i>
       </div>
 
       <button id="start">Start Game</button>
