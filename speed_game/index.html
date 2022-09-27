@@ -26,19 +26,12 @@
 
   <body>
     <section>
-      <h1>MAKE A WISH, CATCH A STAR</h1>
-      <p class="text">Your score is: 
+      <h1>CATCH A STAR, MAKE A WISH</h1>
+      <p class="text">Your score is : 
 <span id="score">0</span>
 
       </p>
 
-      <!-- <div class="stars">
-        <div class="star1 active" id="star1"></div>
-        <div class="star2" id="star2"><i class="fa-thin fa-star"></i></div>
-        <div class="star3" id="star3"><i class="fa-thin fa-star"></i></div>
-        <div class="star4" id="star4"><i class="fa-thin fa-star"></i></div>
-        <div class="star5" id="star5"><i class="fa-thin fa-star"></i></div>
-      </div> -->
       <div class="stars">
         <i id="star1" class="fa-solid fa-star active"></i>
         <i id="star2" class="fa-solid fa-star s"></i>
@@ -50,6 +43,15 @@
       <button id="start">Start Game</button>
       <button id="stop">Stop Game</button>
     </section>
+    
+<section class="overlay hidden">
+  <div class="modal " id="myModal">
+<h2>GAME OVER</h2>
+<p id="result_score">You caught: <span id="final_score">0</span> stars </p>
+<button class="close">x</button>
+  </div>
+
+</section>
 
     <script src="script.js"></script>
   </body>

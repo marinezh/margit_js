@@ -1,7 +1,15 @@
 const startButton = document.querySelector("#start");
 const stopButton = document.querySelector("#stop");
 const stars = document.querySelectorAll("i");
-let result = document.querySelector("#score");
+let result = document.querySelector("#score"); 
+// сменить название переменной result
+let finalScore = document.querySelector('#final_score');
+const modalClose = document.querySelector('.close');
+const modal = document.querySelector('.overlay');
+const answer 
+
+console.log(modalClose);
+console.log(modal);
 
 
 // const overlay = 
@@ -11,8 +19,9 @@ console.log(stars);
 let score = 0
 let active = 0;
 let timer;
-let pace = 1000
-let rounds = 0 
+let pace = 1000;
+let rounds = 0;
+
 const randomStar = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
@@ -22,25 +31,20 @@ stars.forEach((star, i) => {
 });
 
 const starsClicking = (i) => {
-    console.log("clicked star:" + (i + 1));
-    score++;
-    result.textContent = score;
+
     if (i !== active) {
         endGame()
     } else {
         score++;
         rounds--;
         result.textContent = score;
-    }
-        
+    }  
 }
-
-;
-
 //   score.textContent = +score.textContent + 1;
 //   console.log(score.textContent);
 
 const startGame = () => {
+  stars.forEach(star => star.style.pointerEvents = 'auto');
     if (rounds > 3) {
     return endGame
 }
@@ -58,8 +62,6 @@ const startGame = () => {
   function pickNew(active) {
     // let nextActive = randomStar(stars)
       let nextActive = randomStar(0, 4);
-      
-   
 
     if (nextActive != active) {
       return nextActive;
@@ -67,7 +69,6 @@ const startGame = () => {
       return pickNew(active);
     }
   }
-    
 
 };
 
@@ -75,18 +76,44 @@ const endGame = () => {
   // overlay.style.visibility = 'visible';
   console.log("game ended");
   clearTimeout(timer);
+  modal.classList.remove('hidden');
+
+
+  finalScore.textContent = score;
 };
 
 const resetGame = () => {
   window.location.reload();
 };
 
-// function randomStar(stars) {
-//     let random = Math.floor(Math.random() * stars.length + 1);
-//     return random
-// }
 
+// Closing of modal window function
+const modulCloseFunc = () => {
+  console.log('modalclose');
+  modal.classList.add('hidden');
+  
+}
+
+// adding sounds
+function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function(){
+      this.sound.play();
+  }
+  this.stop = function(){
+      this.sound.pause();
+  }
+}
+
+modalClose.addEventListener('click', modulCloseFunc);
 startButton.addEventListener("click", startGame);
 stopButton.addEventListener("click", endGame);
 // stopButton.addEventListener('click', starsClicking)
 // figured out which button is clicked
+
+
