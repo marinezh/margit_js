@@ -6,7 +6,6 @@ let result = document.querySelector("#score");
 let finalScore = document.querySelector('#final_score');
 const modalClose = document.querySelector('.close');
 const modal = document.querySelector('.overlay');
-const answer 
 
 console.log(modalClose);
 console.log(modal);
@@ -92,22 +91,6 @@ const modulCloseFunc = () => {
   console.log('modalclose');
   modal.classList.add('hidden');
   
-}
-
-// adding sounds
-function sound(src) {
-  this.sound = document.createElement("audio");
-  this.sound.src = src;
-  this.sound.setAttribute("preload", "auto");
-  this.sound.setAttribute("controls", "none");
-  this.sound.style.display = "none";
-  document.body.appendChild(this.sound);
-  this.play = function(){
-      this.sound.play();
-  }
-  this.stop = function(){
-      this.sound.pause();
-  }
 }
 
 modalClose.addEventListener('click', modulCloseFunc);
