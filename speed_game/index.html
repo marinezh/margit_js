@@ -1,58 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/b2b8ea5474.js"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
-    <title>Speed Game</title>
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/b2b8ea5474.js" crossorigin="anonymous"></script>
 
-  <body>
-    <section>
-      <h1>CATCH A STAR, MAKE A WISH</h1>
-      <p class="text">Your score is : 
-<span id="score">0</span>
+  <link rel="stylesheet" href="style.css" />
+  <title>Speed Game</title>
+</head>
 
-      </p>
+<body>
+  <section>
+    <h1>CATCH A STAR, MAKE A WISH</h1>
+    <h3>Your score is :
+      <span id="score">0</span>
 
-      <div class="stars">
-        <i id="star1" class="fa-solid fa-star active"></i>
-        <i id="star2" class="fa-solid fa-star s"></i>
-        <i id="star3" class="fa-solid fa-star"></i>
-        <i id="star4" class="fa-solid fa-star"></i>
-        <i id="star5" class="fa-solid fa-star"></i>
-      </div>
+    </h3>
 
-      <button id="start">Start Game</button>
-      <button id="stop">Stop Game</button>
-    </section>
-    
-<section class="overlay hidden">
-  <div class="modal " id="myModal">
-<h2>GAME OVER</h2>
-<p id="result_score">You caught: <span id="final_score">0</span> stars </p>
-<button class="close">x</button>
-  </div>
+    <div class="stars">
+      <i id="star1" class="fa-solid fa-star"></i>
+      <i id="star2" class="fa-solid fa-star"></i>
+      <i id="star3" class="fa-solid fa-star"></i>
+      <i id="star4" class="fa-solid fa-star"></i>
+      <i id="star5" class="fa-solid fa-star"></i>
+    </div>
 
-</section>
+    <button id="start">Start Game</button>
+    <button id="stop" class="hidden">Stop Game</button>
+  </section>
 
-    <script src="script.js"></script>
-  </body>
+  <section class="overlay hidden">
+    <div class="modal " id="myModal">
+      <h2>GAME OVER</h2>
+      <p id="result"><span id="final_score">0</span></p>
+      <button class="close">x</button>
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
