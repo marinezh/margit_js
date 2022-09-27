@@ -18,20 +18,9 @@ const randomStar = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-// const starsClicking = (i) => {
-//   console.log('clicked star' + i);
-//   if (i == active) {
-//     countScore++;
-//     rounds--;
-//     score.textContent = countScore;
-//   } else {
-//     endGame();
-//   }
-// }
-
 const starsClicking = (i) => {
   console.log('clicked star' + i);
-  if (stars[i].classList.contains("active") == true) {
+  if (i === active) {
     const audio = new Audio('assets/stars_clicking_sound.ogg')
     audio.play()
     countScore++;
@@ -41,28 +30,20 @@ const starsClicking = (i) => {
     endGame();
   }
 }
-
+// add event listener for each star
 stars.forEach((star, i) => {
   star.addEventListener("click", () => starsClicking(i));
 });
 
 const startGame = () => {
-
+  // adding pointor event for each star, to make them highlighted after game started only
   stars.forEach(star => star.style.pointerEvents = 'auto');
-
 
   startButton.classList.add('hidden');
   stopButton.classList.remove('hidden')
-  if (rounds > 3) {
+  if (rounds > 1) {
     return endGame();
-  } else {
-    stars.forEach(star => {
-      star.classList.remove("active")
-    })
-
-
   }
-
 
   let nextActive = pickNew(active);
 
@@ -70,9 +51,9 @@ const startGame = () => {
   stars[active].classList.remove("active");
 
   active = nextActive;
-  console.log("curent star is", active);
   timer = setTimeout(startGame, pace);
   pace = pace - 10;
+  rounds++;
 
   // make new star highlighted
   function pickNew(active) {
@@ -86,11 +67,9 @@ const startGame = () => {
   };
 
 };
-
+// end game function
 const endGame = () => {
-  // overlay.style.visibility = 'visible';
   const audio3 = new Audio("assets/game_over.wav");
-  console.log("game ended");
   clearTimeout(timer);
   modal.classList.remove('hidden');
   finalScore.textContent = countScore;
@@ -99,29 +78,24 @@ const endGame = () => {
     resultAnswer.textContent = "Upps, try again!"
   } else if (countScore > 0 && countScore < 15) {
     resultAnswer.textContent = `Only ${countScore}, not enought for dreams come true, try better next time!`
-  } else if (countScore > 15) {
-    resultAnswer.textContent = `Well done, you caught ${countScore} your wish will come true soon!`
+  } else if (countScore >= 15) {
+    resultAnswer.textContent = `Well done, you caught ${countScore} stars, your wish will come true soon!`
   }
   audio3.play();
   stopButton.classList.add('hidden')
   startButton.classList.remove('hidden')
-
 };
-
 
 const resetGame = () => {
   window.location.reload();
 };
 
-
 // Closing of modal window function
 const modulCloseFunc = () => {
-  console.log('modalclose');
   modal.classList.add('hidden');
   resetGame()
-
 }
-
+// Listeners
 modalClose.addEventListener('click', modulCloseFunc);
 startButton.addEventListener("click", startGame);
 stopButton.addEventListener("click", endGame);

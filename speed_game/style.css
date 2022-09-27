@@ -7,8 +7,6 @@
 body {
   font-family: "Rubik Moonrocks", cursive;
   background-color: #333;
-
-  /* background-image: url("https://cdn.pixabay.com/photo/2017/04/23/14/23/nebula-2253941__480.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -81,7 +79,7 @@ button {
   color: black;
   font-family: inherit;
   text-align: center;
-  background-color: rgb(230, 230, 230);
+  background-color: white;
   cursor: pointer;
   text-shadow: 0 0 15px #25CCF7;
   text-shadow: 0 0 30px #25CCF7;
