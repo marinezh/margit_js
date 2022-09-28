@@ -61,13 +61,16 @@ main {
 }
 
 .info {
+    background-color: #333;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 50px;
+  color:#fff;
 }
 
 .btn {
-    background-color: black;
+    background-color: #333;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 5px;
