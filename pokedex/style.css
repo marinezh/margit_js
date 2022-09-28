@@ -33,7 +33,7 @@ main {
   justify-content: center;
 }
 
-.grid {
+.pokedex {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   row-gap: 10px;
@@ -46,16 +46,15 @@ main {
   width: 150px;
   background-color: #fff;
   border-radius: 5px;
-}
-
-.card {
   display: flex;
   flex-direction: column;
 }
 
-.img {
-  height: 150px;
-  width: 150px;
+
+
+img {
+  max-height: 150px;
+  max-width: 150px;
   background-color: rgb(228, 222, 222);
   border-radius: 5px;
 }
