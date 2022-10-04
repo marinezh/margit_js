@@ -42,22 +42,30 @@ main {
   justify-content: center;
 }
 .card {
-  height: 200px;
-  width: 150px;
-  background-color: #fff;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
+ justify-content: center;
+ 
+  height: 250px;
+  width: 200px;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
-
-
 img {
-  max-height: 150px;
-  max-width: 150px;
+  height: 200px;
+  width: 150px;
   background-color: rgb(228, 222, 222);
   border-radius: 5px;
 }
+
+/* .image {
+  display: flex;
+  max-height: 250px;
+  max-width: 200px;
+  background-color: rgb(228, 222, 222);
+} */
+
 
 .info {
     background-color: #333;
