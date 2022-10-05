@@ -1,76 +1,69 @@
-// const content = document.querySelector('.pokedex');
+const content = document.querySelector(".pokedex");
+let searchInput = document.querySelector("#search");
 
-// let pokeData = []
+let pokeData = [];
+let filterPoke = [];
 
-// const fetchData = () => {
-//     fetch('https://pokeapi.co/api/v2/pokemon?limit=100&offset=0')
-//         .then((response) => response.json())
-//         .then((data) => {
-//             pokeData = data.results;
-//             console.log(data.results);
-//             console.log(pokeData);
-//             pokeCards();
-//         });
-// };
-
-// // we should do fetch inside the detch to get the pictures of pokemon
-// // multiple fetche at the same time - request to the google
-// fetchData();
-
-// const pokeCards = () => {
-//     const cards = pokeData.map((pokemon, i) => {
-//         return `<div class="card">
-//   <div class="image">
-//   <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${i + 1}.svg" alt="#">
-//   </div>
-//   <h2>${pokemon.name}</h2>
-// </div>`
-//     })              
-//     .join("");
-//         content.innerHTML = cards;
-    
-// };
-// fetchData()
-
-const content = document.querySelector('.pokedex');
-let pokeData = []
 const fetchPokemon = () => {
-    for (let i = 1; i <= 100; i++){  
+  for (let i = 1; i <= 50; i++) {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
     fetch(url)
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data);
-            const pokemon = {
-                name: data.name,
-                id: data.id,
-                image: data.sprites['front_default'],
-                type: data.types.map((type)=> type.type.name).join(', ')
-            };
-            console.log(pokemon);
-            displayPokemon(pokemon);
-        })
-    }
-}
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+        const pokemon = {
+          name: data.name,
+          id: data.id,
+          image: data.sprites.other["official-artwork"].front_default,
+          type: data.types.map((type) => type.type.name).join(", "),
+        };
 
+        pokeData.push(pokemon);
+        displayPokemon(pokeData);
 
-const displayPokemon = (pokemon) => {
-    console.log(pokemon);
-    const cards = pokemon.map(
-        (pokeman) => {
-                return `<div class="card">
+        console.log(pokemon);
+        // console.log(pokeData);
+      });
+  }
+};
+
+const displayPokemon = (data) => {
+  
+  const cards = data
+    .map(
+      (pokeman) => `<div class="card">
           <div class="image">
           <img src="${pokeman.image}" alt="#">
           </div>
           <h2>${pokeman.name}</h2>
-          <p>${pokeman.type}</p>
+          <p>${pokeman.id}. ${pokeman.type}</p>
         </div>`
-            })              
-            .join("");
-                content.innerHTML = cards;
+    )
+      .join("");
+  
+  content.innerHTML = cards;
+};
+fetchPokemon();
 
+const searchFunc = () => {
+  console.log(searchInput.value);
 
-}
-fetchPokemon()
+  let sort = pokeData.filter((elem) =>
+    elem.name.includes(searchInput.value)
+  );
+  console.log(sort);
 
-sprites.other["official-artwork"].front_default
+    document.querySelector("main").innerHTML = "";
+    filterPoke.push(sort);
+    console.log(filterPoke);
+    displayPokemon(sort);
+    
+};
+
+// if (searchInput.value == "") {
+//   content.innerHTML = displayPokemon(pokeData);
+// } else {
+//   content.innerHTML = sort;
+// }
+
+searchInput.addEventListener("input", searchFunc);

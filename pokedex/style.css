@@ -12,6 +12,10 @@ body {
   );
 }
 
+h2 {
+  font-size: 18px;
+color:rgb(0, 153, 255)
+}
 header {
   margin-top: 50px;
   display: flex;
