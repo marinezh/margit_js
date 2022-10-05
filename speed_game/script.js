@@ -36,7 +36,7 @@ stars.forEach((star, i) => {
 });
 
 const startGame = () => {
-  // adding pointor event for each star, to make them highlighted after game started only
+  // adding pointor event for each star, to make them to be highlighted after game started only.
   stars.forEach(star => star.style.pointerEvents = 'auto');
 
   startButton.classList.add('hidden');
@@ -55,7 +55,7 @@ const startGame = () => {
   pace = pace - 10;
   rounds++;
 
-  // make new star highlighted
+  // make new star to be highlighted.
   function pickNew(active) {
     let nextActive = randomStar(0, 4);
 
@@ -65,7 +65,6 @@ const startGame = () => {
       return pickNew(active);
     };
   };
-
 };
 // end game function
 const endGame = () => {
