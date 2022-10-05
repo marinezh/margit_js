@@ -1,21 +1,14 @@
 const form = document.querySelector("form");
-
 const customer = document.querySelector("#name");
-
 const size = document.querySelectorAll('[name="size"]');
-
 const toppings = document.querySelectorAll("input[type=checkbox]");
-
 const delivery = document.querySelector("#delivery");
-
 const order = document.querySelector("#order");
 
 
 const takeOrder = (event) => {
   event.preventDefault();
-
   let customerName = customer.value;
-
   let sizeResult = "";
   let toppingsResult = [];
   let deliveryResult = delivery.options[delivery.selectedIndex].value;
@@ -59,13 +52,12 @@ const takeOrder = (event) => {
   if (deliveryResult == "home") {
     price += 5;
   }
-
   order.innerHTML = `Thank you for your order, <span>${customerName}</span>. <br>
   You ordered pizza for <span>${sizeResult}</span>. <br>
   Toppings which you chose : <span>${toppingsResult.join(", ")}</span>. <br>  
   Delivery method is : <span>${deliveryResult}</span>. <br>
   Total price is : <span>${price} euro</span>.`;
-
+  
   form.reset();
 };
 
