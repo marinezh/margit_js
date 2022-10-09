@@ -10,25 +10,19 @@ const fetchPokemon = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
         const pokemon = {
           name: data.name,
           id: data.id,
           image: data.sprites.other["official-artwork"].front_default,
           type: data.types.map((type) => type.type.name).join(", "),
         };
-
         pokeData.push(pokemon);
         displayPokemon(pokeData);
-
-        console.log(pokemon);
-        // console.log(pokeData);
       });
   }
 };
 
 const displayPokemon = (data) => {
-  
   const cards = data
     .map(
       (pokeman) => `<div class="card">
