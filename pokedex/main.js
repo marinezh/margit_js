@@ -33,8 +33,8 @@ const displayPokemon = (data) => {
           <p>${pokeman.id}. ${pokeman.type}</p>
         </div>`
     )
-      .join("");
-  
+    .join("");
+
   content.innerHTML = cards;
 };
 fetchPokemon();
@@ -42,16 +42,9 @@ fetchPokemon();
 const searchFunc = () => {
   console.log(searchInput.value);
 
-  let sort = pokeData.filter((elem) =>
-    elem.name.includes(searchInput.value)
-  );
+  let sort = pokeData.filter((elem) => elem.name.includes(searchInput.value));
   console.log(sort);
-
-    document.querySelector("main").innerHTML = "";
-    filterPoke.push(sort);
-    console.log(filterPoke);
-    displayPokemon(sort);
-    
+  displayPokemon(sort);
 };
 
 // if (searchInput.value == "") {
