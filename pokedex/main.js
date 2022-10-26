@@ -3,27 +3,27 @@ const searchInput = document.querySelector("#search");
 const buttons = document.querySelectorAll(".btn");
 
 let pokeData = [];
-let filterPoke = [];
 
-// const getPokeType = (type) => {
-//   switch (type) {
-//     case "bug":
-//       return <img src = ""></img>
-//   }
-// }
-
+// define the generation number
 const getGen = (id) => {
   if (id < 150) return 1;
-  else if (id < 300) return 2;
-  else return 3;
+  else if (id < 251) return 2;
+  else if (id < 386) return 3;
+  else if (id < 493) return 4;
+  else if (id < 649) return 5;
+  else if (id < 721) return 6;
+  else if (id < 809) return 7;
+  else if (id < 905) return 8;
 };
 
+// get png pictures
 const getImg = (sprites) => {
   let res = sprites.other.dream_world.front_default;
   if (!res) res = sprites.other["official-artwork"].front_default;
   return res;
 };
 
+// fetching pokemons from API
 const fetchPokemon = () => {
   for (let i = 1; i <= 905; i++) {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
@@ -43,7 +43,7 @@ const fetchPokemon = () => {
             .map(
               (
                 type
-              ) => `<img class="poke_symbol" src="assets/${type.type.name}.png"
+              ) => `<img class="type_symbol" src="assets/${type.type.name}.png"
           alt="#"
       />`
             )
@@ -54,17 +54,17 @@ const fetchPokemon = () => {
       });
   }
 };
-
+// pokemon card creation
 const displayPokemon = (data) => {
   const cards = data
     .map(
       (pokeman) => `<div class="card">
           <div class="poke_image">
-          <img src="${pokeman.image}" alt="#">
+          <img class="shake" src="${pokeman.image}" alt="#">
           </div>
           <h2>#${pokeman.id} ${pokeman.name}</h2>
-          <div class = 'type'>${pokeman.type}</div>
-         
+          <div class = 'shake type'>${pokeman.type}</div>
+          <div class = 'shake gen'>${pokeman.gen}</div>
         </div>`
     )
     .join("");
@@ -73,6 +73,7 @@ const displayPokemon = (data) => {
 };
 fetchPokemon();
 
+// search function by name and by type
 const searchFunc = () => {
   console.log(searchInput.value);
 
@@ -87,13 +88,15 @@ const searchFunc = () => {
 
 searchInput.addEventListener("input", searchFunc);
 
+
+// search function by generation
 buttons.forEach((button, i) =>
   button.addEventListener("click", () => {
-    console.log(i, ' clicked');
+    // console.log(i, ' clicked');
     let sort;
     if (!i) sort = pokeData;
     else {
-      sort = pokeData.filter((pokemon) => (pokemon.gen === i));
+      sort = pokeData.filter((elem) => (elem.gen === i));
     }
     displayPokemon(sort);
   })
